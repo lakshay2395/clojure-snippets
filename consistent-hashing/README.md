@@ -1,7 +1,6 @@
 # consistent-hashing
 
-A Clojure library designed to ... well, that part is up to you.
-
+A Clojure library implementing weight supported consistent hashing. This can create a setup for upto 90 servers. (I think that's enough :P)
 ## Usage
 
 FIXME
