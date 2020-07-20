@@ -2,6 +2,8 @@
   <dictionary name="lakshaybhambri">
     <words>
       <w>addressbook</w>
+      <w>protojure</w>
+      <w>serdes</w>
     </words>
   </dictionary>
 </component>

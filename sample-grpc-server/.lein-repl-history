@@ -1,0 +1,13 @@
+(use 'com.example.addressbook)
+(new-Person {:name "Jane Doe"})
+(require '[protojure.protobuf :as protojure])
+(protojure/->pb (new-Person {:name "Jane Doe"}))
+(into [] (protojure/->pb (new-Person {:name "Jane Doe"})))
+(pb->Person (byte-array [10 8 74 97 110 101 32 68 111 101]))
+exit
+(require 'com.example.addressbook.Greeter.client)
+(require '[com.example.addressbook.Greeter.client :as greeter])
+(greeter/Hello)
+(require '[protojure.grpc.client.providers.http2 :as grpc.http2])
+(def client @(grpc.http2/connect {:uri "http://localhost:8080"}))
+@(greeter/Hello client {:name "Janet Johnathan Doe"})
